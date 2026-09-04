@@ -1,5 +1,5 @@
 /* ==========================================================
-   Girl Scout Troop 4210 — Stylesheet
+   Girl Scout Troop 2026 — Stylesheet
    ========================================================== */
 
 :root {
@@ -231,35 +231,6 @@ a { color: var(--green-dark); text-decoration: none; }
 .activity-card h3 { font-size: 1.05rem; }
 .activity-card p { font-size: 0.92rem; margin: 0; }
 
-/* Events */
-.event-list { display: flex; flex-direction: column; gap: 16px; margin-top: 32px; }
-.event-card {
-  display: flex;
-  align-items: center;
-  gap: 22px;
-  background: var(--white);
-  border-radius: var(--radius);
-  padding: 18px 24px;
-  box-shadow: var(--shadow);
-}
-.event-date {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 68px;
-  height: 68px;
-  flex-shrink: 0;
-  background: var(--green);
-  color: var(--white);
-  border-radius: 12px;
-  font-family: var(--font-head);
-}
-.event-date .month { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; }
-.event-date .day { font-size: 1.4rem; font-weight: 800; line-height: 1; }
-.event-info h3 { font-size: 1.05rem; margin-bottom: 2px; }
-.event-info p { margin: 0; font-size: 0.9rem; }
-
 /* Volunteer Opportunities */
 .volunteer-intro { max-width: 700px; margin-top: -8px; }
 
@@ -359,49 +330,6 @@ a { color: var(--green-dark); text-decoration: none; }
 .questionnaire-summary dt { font-weight: 700; font-size: 0.85rem; color: var(--teal); margin-top: 10px; }
 .questionnaire-summary dd { margin: 2px 0 0; color: var(--ink-soft); font-size: 0.92rem; }
 
-/* Gallery */
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-  margin-top: 32px;
-}
-.gallery-item {
-  aspect-ratio: 4 / 3;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-}
-.g1 { background: linear-gradient(135deg, #00a651, #00693e); }
-.g2 { background: linear-gradient(135deg, #00838a, #005a5f); }
-.g3 { background: linear-gradient(135deg, #f2b134, #d99400); }
-.g4 { background: linear-gradient(135deg, #5b3a29, #8a5a3f); }
-.g5 { background: linear-gradient(135deg, #00693e, #00838a); }
-.g6 { background: linear-gradient(135deg, #d99400, #00a651); }
-.gallery-note { margin-top: 18px; font-size: 0.85rem; }
-.gallery-note code { background: rgba(0,0,0,0.06); padding: 2px 6px; border-radius: 4px; }
-
-/* Join */
-.join-grid {
-  display: grid;
-  grid-template-columns: 1.4fr 1fr;
-  gap: 48px;
-  align-items: center;
-}
-.join-steps { list-style: none; padding: 0; margin: 24px 0; }
-.join-steps li {
-  padding: 10px 0;
-  border-bottom: 1px solid rgba(0,0,0,0.08);
-  color: var(--ink-soft);
-}
-.join-steps strong { color: var(--green-dark); }
-.join-card {
-  background: var(--white);
-  border-radius: var(--radius);
-  padding: 32px;
-  box-shadow: var(--shadow);
-  border-top: 4px solid var(--teal);
-}
-
 /* Contact */
 .contact-grid {
   display: grid;
@@ -470,10 +398,9 @@ a { color: var(--green-dark); text-decoration: none; }
 
 /* Responsive */
 @media (max-width: 860px) {
-  .about-grid, .join-grid, .contact-grid { grid-template-columns: 1fr; }
+  .about-grid, .contact-grid { grid-template-columns: 1fr; }
   .about-cards { grid-template-columns: 1fr 1fr; }
   .activity-grid { grid-template-columns: 1fr 1fr; }
-  .gallery-grid { grid-template-columns: 1fr 1fr; }
   .facts-grid { grid-template-columns: 1fr 1fr; }
   .opportunity-grid { grid-template-columns: 1fr 1fr; }
 }
@@ -494,9 +421,8 @@ a { color: var(--green-dark); text-decoration: none; }
     box-shadow: var(--shadow);
   }
   .site-nav.open { display: flex; }
-  .about-cards, .activity-grid, .gallery-grid, .opportunity-grid { grid-template-columns: 1fr; }
+  .about-cards, .activity-grid, .opportunity-grid { grid-template-columns: 1fr; }
   .facts-grid { grid-template-columns: 1fr 1fr; }
-  .event-card { flex-direction: row; }
   .section { padding: 60px 0; }
   .form-row, .checkbox-grid { grid-template-columns: 1fr; }
   .questionnaire-wrap { padding: 24px; }
