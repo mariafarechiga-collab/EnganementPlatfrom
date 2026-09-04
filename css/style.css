@@ -232,32 +232,7 @@ a { color: var(--green-dark); text-decoration: none; }
 .activity-card p { font-size: 0.92rem; margin: 0; }
 
 /* Volunteer Opportunities */
-.volunteer-intro { max-width: 700px; margin-top: -8px; }
-
-.opportunity-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 18px;
-  margin: 32px 0 48px;
-}
-.opportunity-card {
-  background: var(--white);
-  border-radius: var(--radius);
-  padding: 22px;
-  box-shadow: var(--shadow);
-  border-top: 4px solid var(--teal);
-}
-.opportunity-card h3 { font-size: 1rem; margin-bottom: 0.4em; }
-.opportunity-card p { font-size: 0.88rem; margin-bottom: 12px; }
-.opportunity-card .tag {
-  display: inline-block;
-  background: var(--green-light);
-  color: var(--green-dark);
-  font-size: 0.75rem;
-  font-weight: 700;
-  padding: 4px 10px;
-  border-radius: 999px;
-}
+.volunteer-intro { max-width: 700px; margin-top: -8px; margin-bottom: 32px; }
 
 .questionnaire-wrap {
   background: var(--white);
@@ -307,7 +282,7 @@ a { color: var(--green-dark); text-decoration: none; }
 }
 .checkbox-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
   gap: 10px;
 }
 .checkbox-option {
@@ -402,7 +377,6 @@ a { color: var(--green-dark); text-decoration: none; }
   .about-cards { grid-template-columns: 1fr 1fr; }
   .activity-grid { grid-template-columns: 1fr 1fr; }
   .facts-grid { grid-template-columns: 1fr 1fr; }
-  .opportunity-grid { grid-template-columns: 1fr 1fr; }
 }
 
 @media (max-width: 640px) {
@@ -421,7 +395,7 @@ a { color: var(--green-dark); text-decoration: none; }
     box-shadow: var(--shadow);
   }
   .site-nav.open { display: flex; }
-  .about-cards, .activity-grid, .opportunity-grid { grid-template-columns: 1fr; }
+  .about-cards, .activity-grid { grid-template-columns: 1fr; }
   .facts-grid { grid-template-columns: 1fr 1fr; }
   .section { padding: 60px 0; }
   .form-row, .checkbox-grid { grid-template-columns: 1fr; }

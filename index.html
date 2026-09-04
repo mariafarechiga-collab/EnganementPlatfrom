@@ -156,81 +156,66 @@
   <section class="section volunteer" id="volunteer">
     <div class="container">
       <p class="section-eyebrow">Get Involved</p>
-      <h2>Volunteer Opportunities</h2>
-      <p class="volunteer-intro">Troop 2026 runs entirely on volunteers! Browse a few of the roles we need filled below, then fill out the quick questionnaire so we can match you to the right opportunity.</p>
-
-      <div class="opportunity-grid">
-        <div class="opportunity-card">
-          <h3>Co-Leader / Assistant Leader</h3>
-          <p>Help plan and run weekly meetings alongside our troop leaders.</p>
-          <span class="tag">Weekly commitment</span>
-        </div>
-        <div class="opportunity-card">
-          <h3>Cookie &amp; Fall Booth Helper</h3>
-          <p>Staff a booth for a shift or two during our product sales.</p>
-          <span class="tag">Seasonal</span>
-        </div>
-        <div class="opportunity-card">
-          <h3>Event Driver / Chaperone</h3>
-          <p>Drive or chaperone girls to outings, campouts, and field trips.</p>
-          <span class="tag">As needed</span>
-        </div>
-        <div class="opportunity-card">
-          <h3>Badge Workshop Instructor</h3>
-          <p>Share a skill or hobby by leading a one-time badge activity.</p>
-          <span class="tag">One-time</span>
-        </div>
-      </div>
+      <h2>Volunteer Opportunity</h2>
+      <p class="volunteer-intro">Are you a community member or organization looking for Girl Scout volunteers for your event? Fill out the questionnaire below and a troop leader will follow up to coordinate.</p>
 
       <div class="questionnaire-wrap">
-        <h3>Volunteer Interest Questionnaire</h3>
-        <p>Fill in your answers below and a troop leader will follow up about next steps.</p>
+        <h3>Request Girl Scout Volunteers</h3>
+        <p>Please provide the details below so we can match your event with our troop.</p>
 
         <form class="questionnaire-form" id="volunteerForm">
+          <div class="form-field">
+            <label for="vevent">Event</label>
+            <input type="text" id="vevent" name="vevent" placeholder="Name of the event" required />
+          </div>
+
+          <div class="form-field">
+            <label for="vrole">Volunteer role</label>
+            <input type="text" id="vrole" name="vrole" placeholder="What kind of help do you need?" required />
+          </div>
+
           <div class="form-row">
             <div class="form-field">
-              <label for="vname">Full name</label>
+              <label for="vdate">Date</label>
+              <input type="date" id="vdate" name="vdate" required />
+            </div>
+            <div class="form-field">
+              <label for="vtime">Time</label>
+              <input type="time" id="vtime" name="vtime" required />
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="vaddress">Address</label>
+            <input type="text" id="vaddress" name="vaddress" placeholder="Where is the event taking place?" required />
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label for="vname">Contact name</label>
               <input type="text" id="vname" name="vname" required />
             </div>
             <div class="form-field">
-              <label for="vemail">Email</label>
+              <label for="vemail">Contact email</label>
               <input type="email" id="vemail" name="vemail" required />
             </div>
           </div>
 
-          <div class="form-row">
-            <div class="form-field">
-              <label for="vphone">Phone (optional)</label>
-              <input type="tel" id="vphone" name="vphone" />
-            </div>
-            <div class="form-field">
-              <label for="availability">When are you generally available?</label>
-              <input type="text" id="availability" name="availability" placeholder="e.g. Tuesday evenings, weekends" required />
-            </div>
+          <div class="form-field">
+            <label for="vphone">Contact phone</label>
+            <input type="tel" id="vphone" name="vphone" required />
           </div>
 
           <fieldset class="form-field">
-            <legend>Which areas interest you? (check all that apply)</legend>
+            <legend>Preferred contact method</legend>
             <div class="checkbox-grid">
-              <label class="checkbox-option"><input type="checkbox" name="interests" value="Co-Leader / Assistant Leader" /> Co-Leader / Assistant Leader</label>
-              <label class="checkbox-option"><input type="checkbox" name="interests" value="Cookie & Fall Booth Helper" /> Cookie &amp; Fall Booth Helper</label>
-              <label class="checkbox-option"><input type="checkbox" name="interests" value="Event Driver / Chaperone" /> Event Driver / Chaperone</label>
-              <label class="checkbox-option"><input type="checkbox" name="interests" value="Badge Workshop Instructor" /> Badge Workshop Instructor</label>
-              <label class="checkbox-option"><input type="checkbox" name="interests" value="Other" /> Other</label>
+              <label class="checkbox-option"><input type="radio" name="contactMethod" value="Call" required /> Call</label>
+              <label class="checkbox-option"><input type="radio" name="contactMethod" value="Text" required /> Text</label>
+              <label class="checkbox-option"><input type="radio" name="contactMethod" value="Email" required /> Email</label>
             </div>
           </fieldset>
 
-          <div class="form-field">
-            <label for="experience">Relevant experience or skills (optional)</label>
-            <textarea id="experience" name="experience" rows="3" placeholder="e.g. former Girl Scout, first aid certified, crafting, coaching..."></textarea>
-          </div>
-
-          <div class="form-field">
-            <label for="why">Why do you want to volunteer with our troop?</label>
-            <textarea id="why" name="why" rows="4" required></textarea>
-          </div>
-
-          <button type="submit" class="btn btn-primary">Submit Questionnaire</button>
+          <button type="submit" class="btn btn-primary">Submit Request</button>
           <p class="form-status" id="volunteerStatus" role="status"></p>
         </form>
 

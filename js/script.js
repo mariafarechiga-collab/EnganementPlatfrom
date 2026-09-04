@@ -43,16 +43,17 @@ if (volunteerForm) {
     e.preventDefault();
 
     const data = new FormData(volunteerForm);
-    const interests = data.getAll('interests').join(', ') || 'None selected';
 
     const answers = [
-      ['Name', data.get('vname')],
-      ['Email', data.get('vemail')],
-      ['Phone', data.get('vphone') || '—'],
-      ['Areas of interest', interests],
-      ['Availability', data.get('availability')],
-      ['Relevant experience or skills', data.get('experience') || '—'],
-      ['Why do you want to volunteer with us?', data.get('why')],
+      ['Event', data.get('vevent')],
+      ['Volunteer role', data.get('vrole')],
+      ['Date', data.get('vdate')],
+      ['Time', data.get('vtime')],
+      ['Address', data.get('vaddress')],
+      ['Contact name', data.get('vname')],
+      ['Contact email', data.get('vemail')],
+      ['Contact phone', data.get('vphone')],
+      ['Preferred contact method', data.get('contactMethod')],
     ];
 
     volunteerSummaryBody.innerHTML = '';
@@ -65,7 +66,7 @@ if (volunteerForm) {
       volunteerSummaryBody.appendChild(dd);
     });
 
-    volunteerStatus.textContent = 'Thank you! Your volunteer questionnaire has been submitted. We\'ll reach out soon.';
+    volunteerStatus.textContent = 'Thank you! Your volunteer request has been submitted. We\'ll reach out soon.';
     volunteerSummary.hidden = false;
     volunteerForm.reset();
     volunteerSummary.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
