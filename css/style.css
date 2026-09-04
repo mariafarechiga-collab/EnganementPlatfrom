@@ -7,6 +7,8 @@
   --green: #00a651;
   --green-light: #e6f5ec;
   --teal: #00838a;
+  --gold: #d99400;
+  --gold-dark: #a86f00;
   --brown: #5b3a29;
   --cream: #fdf9f2;
   --ink: #22282b;
@@ -127,6 +129,15 @@ a { color: var(--green-dark); text-decoration: none; }
   border-radius: 999px;
 }
 .nav-cta:hover { background: var(--green-dark); }
+
+.nav-donate {
+  background: var(--gold);
+  color: var(--white) !important;
+  padding: 9px 20px;
+  border-radius: 999px;
+  transition: background 0.15s ease;
+}
+.nav-donate:hover { background: var(--gold-dark); }
 
 .nav-toggle {
   display: none;
@@ -305,6 +316,34 @@ a { color: var(--green-dark); text-decoration: none; }
 .questionnaire-summary dt { font-weight: 700; font-size: 0.85rem; color: var(--teal); margin-top: 10px; }
 .questionnaire-summary dd { margin: 2px 0 0; color: var(--ink-soft); font-size: 0.92rem; }
 
+/* Donate */
+.donate-intro { max-width: 700px; }
+.donate-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin: 32px 0 40px;
+}
+.donate-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: var(--shadow);
+  border-top: 4px solid var(--gold);
+}
+.donate-card h3 { font-size: 1.05rem; }
+.donate-card p { font-size: 0.92rem; margin: 0; }
+.donate-cta {
+  text-align: center;
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 32px;
+  max-width: 640px;
+  margin: 0 auto;
+}
+.donate-note { font-size: 0.85rem; margin: 16px 0 0; }
+
 /* Contact */
 .contact-grid {
   display: grid;
@@ -377,6 +416,7 @@ a { color: var(--green-dark); text-decoration: none; }
   .about-cards { grid-template-columns: 1fr 1fr; }
   .activity-grid { grid-template-columns: 1fr 1fr; }
   .facts-grid { grid-template-columns: 1fr 1fr; }
+  .donate-grid { grid-template-columns: 1fr 1fr; }
 }
 
 @media (max-width: 640px) {
@@ -395,7 +435,7 @@ a { color: var(--green-dark); text-decoration: none; }
     box-shadow: var(--shadow);
   }
   .site-nav.open { display: flex; }
-  .about-cards, .activity-grid { grid-template-columns: 1fr; }
+  .about-cards, .activity-grid, .donate-grid { grid-template-columns: 1fr; }
   .facts-grid { grid-template-columns: 1fr 1fr; }
   .section { padding: 60px 0; }
   .form-row, .checkbox-grid { grid-template-columns: 1fr; }
