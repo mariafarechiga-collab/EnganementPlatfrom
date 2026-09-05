@@ -132,6 +132,7 @@ a { color: var(--blue-dark); text-decoration: none; }
   color: var(--white) !important;
   padding: 9px 20px;
   border-radius: 999px;
+  font-weight: 800;
   transition: background 0.15s ease;
 }
 .nav-donate:hover { background: var(--gold-dark); }
